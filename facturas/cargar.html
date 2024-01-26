@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cargar.css">
+    <title>Formulario de Carga de Facturas</title>
+</head>
+<body>
+
+<h2>Formulario de Carga de Facturas</h2>
+
+<form action="procesar_factura.php" method="post">
+    <!-- Datos del Comprobante -->
+    <section class="comprobante">
+        <label for="tipo_comprobante">Tipo de Comprobante:</label>
+        <input type="text" name="tipo_comprobante" required>
+    
+        <label for="numero_comprobante">Número de Comprobante:</label>
+        <input type="text" name="numero_comprobante" required>
+    
+        <label for="fecha_comprobante">Fecha de Comprobante:</label>
+        <input type="date" name="fecha_comprobante" required>
+    </section>
+
+    <!-- Datos del Proveedor -->
+    <section class="proveedor">
+        <label for="proveedor">Proveedor:</label>
+        <input type="text" name="proveedor" required>
+    </section>
+
+    <!-- Datos Contables -->
+    <section class="contable">
+        <label for="cuenta_contable">Cuenta Contable:</label>
+        <input type="text" name="cuenta_contable" required>
+    </section>
+
+    <!-- Condiciones de Pago -->
+    <section class="formapago">
+        <label for="condicion_pago">Condición de Pago:</label>
+        <input type="text" name="condicion_pago" required>
+    </section>
+
+    <section class="importes">
+        <!-- Detalles de Montos -->
+        <label for="neto_grabado">Neto Grabado:</label>
+        <input type="number" name="neto_grabado" required>
+    
+
+        <label for="porcentaje_impuesto">Porcentaje de Impuesto:</label>
+        <input type="number" name="porcentaje_impuesto" required>
+
+        <label for="valor_impuesto">Valor de Impuesto:</label>
+        <input type="number" name="valor_impuesto" required>
+
+        <label for="importe_exento">Importe Exento:</label>
+        <input type="number" name="importe_exento" required>
+        
+        <!-- Retenciones -->
+    
+        <label for="retencion_iva">Retención de IVA:</label>
+        <input type="number" name="retencion_iva" required>
+    
+        <label for="retencion_ingresos_brutos">Retención de Ingresos Brutos:</label>
+        <input type="number" name="retencion_ingresos_brutos" required>
+    
+        <label for="retencion_ganancias">Retención de Ganancias:</label>
+        <input type="number" name="retencion_ganancias" required>
+    
+        <!-- Otros Datos -->
+        <label for="usuario_autoriza">Usuario que Autorizó el Gasto:</label>
+        <input type="text" name="usuario_autoriza" required>
+    
+        <label for="destino_gasto">Destino del Gasto:</label>
+        <input type="text" name="destino_gasto" required>
+    </section>  
+
+
+    <!-- Botón de Enviar -->
+    <button type="submit">Enviar Factura</button>
+</form>
+
+</body>
+</html>
